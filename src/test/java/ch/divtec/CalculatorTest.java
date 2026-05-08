@@ -3,6 +3,7 @@ package ch.divtec;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,13 @@ import org.junit.jupiter.api.Test;
 public class CalculatorTest {
 
     private final Calculator calculator = new Calculator();
+
+    @Test
+    void testAdd() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(5, calculator.add(5, 5));
+    }
 
     @Test
     void addNormal() {
